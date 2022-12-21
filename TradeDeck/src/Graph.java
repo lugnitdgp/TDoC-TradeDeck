@@ -3,9 +3,9 @@ import java.awt.*;
 import java.awt.geom.*;
 
 public class Graph extends JPanel {
-    int[] cordx={40,80,120,160};
-    int[] cordy={220,180,240,200};
-    int marg=20;
+    int[] cordx={20,40,60,80,100,120,140,160,180,200,210,220,240,260,280,300};
+    int[] cordy;
+    int marg=5;
     
     protected void paintComponent(Graphics grf){
         super.paintComponent(grf);
@@ -21,17 +21,17 @@ public class Graph extends JPanel {
         
         //changing the color
         //vertical grigfs
-        int xstart=0;
-        for(int i=2;i<marg;i++){
-            xstart=i*(width/20);
-            graph.drawLine(xstart,10+marg,xstart,height-marg);
-        }
-        //horizontal grids
-        int ystart=0;
-        for(int i=1;i<13;i++){
-            ystart=i*(width/21);
-            graph.drawLine(marg,ystart,width-marg,ystart);
-        }
+//        int xstart=0;
+//        for(int i=2;i<marg;i++){
+//            xstart=i*(width/20);
+//            graph.drawLine(xstart,10+marg,xstart,height-marg);
+//        }
+//        //horizontal grids
+//        int ystart=0;
+//        for(int i=1;i<13;i++){
+//            ystart=i*(width/21);
+//            graph.drawLine(marg,ystart,width-marg,ystart);
+//        }
         
         
         for(int i=0;i<cordx.length;i++){
