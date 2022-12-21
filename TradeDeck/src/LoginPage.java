@@ -34,6 +34,7 @@ public class LoginPage extends javax.swing.JFrame {
         RegisterPageRoute = new javax.swing.JButton();
         LoginPage_Heading = new javax.swing.JLabel();
         LoginPage_tagline = new javax.swing.JLabel();
+        forgotPassword_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -158,6 +159,17 @@ public class LoginPage extends javax.swing.JFrame {
         LoginPage_tagline.setForeground(new java.awt.Color(255, 255, 255));
         LoginPage_tagline.setText("Welcome to TradeVerse");
 
+        forgotPassword_button.setBackground(new java.awt.Color(255, 51, 51));
+        forgotPassword_button.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
+        forgotPassword_button.setForeground(new java.awt.Color(255, 255, 255));
+        forgotPassword_button.setText("Forgot Password?");
+        forgotPassword_button.setBorder(null);
+        forgotPassword_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                forgotPassword_buttonActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout loginPage_ContainerLayout = new org.jdesktop.layout.GroupLayout(loginPage_Container);
         loginPage_Container.setLayout(loginPage_ContainerLayout);
         loginPage_ContainerLayout.setHorizontalGroup(
@@ -175,7 +187,9 @@ public class LoginPage extends javax.swing.JFrame {
                         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, loginPage_ContainerLayout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 46, Short.MAX_VALUE)
-                        .add(LoginForm_Container, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(loginPage_ContainerLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                            .add(forgotPassword_button)
+                            .add(LoginForm_Container, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(35, 35, 35))))
         );
         loginPage_ContainerLayout.setVerticalGroup(
@@ -188,7 +202,9 @@ public class LoginPage extends javax.swing.JFrame {
                 .add(LoginPage_tagline)
                 .add(18, 18, 18)
                 .add(LoginForm_Container, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(forgotPassword_button)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
@@ -263,6 +279,16 @@ public class LoginPage extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_RegisterPageRouteActionPerformed
 
+    private void forgotPassword_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_forgotPassword_buttonActionPerformed
+        // TODO add your handling code here:
+        ForgotPassword fp = new ForgotPassword();
+        fp.setVisible(true);
+        fp.pack();
+        fp.setLocationRelativeTo(null);
+        fp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_forgotPassword_buttonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -308,6 +334,7 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JButton RegisterPageRoute;
     private javax.swing.JLabel Username;
     private javax.swing.JTextField Username_input;
+    private javax.swing.JButton forgotPassword_button;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JPanel loginPage_Container;
